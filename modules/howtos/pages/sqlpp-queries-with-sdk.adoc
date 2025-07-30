@@ -1,0 +1,159 @@
+= Querying with {sqlpp}
+:page-toclevels: 3
+:description: You can query for documents in Couchbase using the {sqlpp} query language, a language based on SQL, but designed for structured and flexible JSON documents.
+
+
+[abstract]
+{description}
+
+
+
+On this page we dive straight into using the Query Service API from the {name-sdk}.
+For a deeper look at the concepts, to help you better understand the Query Service, and the {sqlpp} language, see the links in the <<further-information,Further Information>> section at the end of this page.
+
+
+
+
+Here we show queries against the Travel Sample collection, at cluster and scope level,
+and give links to information on adding other collections to your data.
+// kafka
+// postgres
+// capella
+
+
+== Before You Start
+
+This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], added your IP address to the allowlist, and xref:columnar:admin:prepare-project.adoc#cluster[created a Columnar cluster].
+
+Create a collection to work upon by xref:columnar:intro:examples.adoc#travel-sample[importing the travel-sample dataset] into your cluster.
+
+
+
+== Querying Your Dataset
+
+Most queries return more than one result, and you want to iterate over the results:
+
+=== Scope Level Queries
+
+[{tabs}]
+====
+Sync API::
++
+--
+[source,python]
+----
+include::devguide:example$python/query.py[tag=scope-query,indent=0]
+----
+--
+
+Async API::
++
+--
+[source,python]
+----
+include::devguide:example$python/async_query.py[tag=scope-query,indent=0]
+----
+--
+====
+
+=== Cluster Level Queries
+
+[{tabs}]
+====
+Sync API::
++
+--
+[source,python]
+----
+include::devguide:example$python/query.py[tag=cluster-query,indent=0]
+----
+--
+
+Async API::
++
+--
+[source,python]
+----
+include::devguide:example$python/async_query.py[tag=cluster-query,indent=0]
+----
+--
+====
+
+
+=== Positional and Named Parameters
+
+Supplying parameters as individual arguments to the query allows the query engine to optimize the parsing and planning of the query. You can either supply these parameters by name or by position.
+
+==== Positional Parameters
+
+Execute a query with positional arguments:
+
+[{tabs}]
+====
+Sync API::
++
+--
+[source,python]
+----
+include::devguide:example$python/query.py[tag=query-positional-params,indent=0]
+----
+--
+
+Async API::
++
+--
+[source,python]
+----
+include::devguide:example$python/async_query.py[tag=query-positional-params,indent=0]
+----
+--
+====
+
+==== Named Parameters
+
+Execute a query with named arguments:
+
+[{tabs}]
+====
+Sync API::
++
+--
+[source,python]
+----
+include::devguide:example$python/query.py[tag=query-named-params,indent=0]
+----
+--
+
+Async API::
++
+--
+[source,python]
+----
+include::devguide:example$python/async_query.py[tag=query-named-params,indent=0]
+----
+--
+====
+
+== Using the Query Result
+
+Results from the Couchbase Columnar SDK can easily be used with several common Data Analytics Python libraries, including https://pandas.pydata.org/[Pandas] and https://arrow.apache.org/docs/python/index.html[PyArrow].
+[source,python]
+.Importing the result to a pandas DataFrame.
+----
+include::devguide:example$python/third_party.py[tag=pandas,indent=0]
+----
+
+[source,python]
+.Importing the query result to a PyArrow table.
+----
+include::devguide:example$python/third_party.py[tag=pyarrow,indent=0]
+----
+
+
+
+== Further Information
+
+The xref:server:analytics:1_intro.adoc[{sqlpp} for Analytics Reference]
+offers a complete guide to the SQL++ language for both of our analytics services, including all of the latest additions.
+
+

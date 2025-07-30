@@ -1,0 +1,83 @@
+= Compatibility
+:description: Platform compatibility, and features available in different SDK versions, and compatibility between Server and SDK.
+:page-toclevels: 3
+:table-caption!:
+
+
+[abstract]
+{description}
+// Plus notes on Cloud, networks, and AWS Lambda.
+
+
+
+
+
+== Platform Compatibility
+
+
+=== Python Version Compatibility
+
+Currently Python 3.9 - Python 3.12 is supported.
+
+// TIP: Remember to keep your Python installation up to date, via `pip`.
+
+
+
+=== OS Compatibility
+
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=os-compat]
+
+
+
+
+
+=== Network Requirements
+
+include::{sdk_api}@columnar-sdk:shared:partial$network-requirements.adoc[tag=lan-like]
+
+
+
+
+
+
+== Capella Columnar Compatibility
+
+
+Capella Columnar is a fully hosted service, continually updated, and offering the latest version --
+with users having a few weeks to upgrade from the previous version.
+As such, the latest Couchbase Columnar SDKs are tested against the latest versions.
+Where older versions of the {name-sdk} pre-date significant new features in Columnar, those differences will be noted in this section.
+
+
+
+
+
+////
+=== API Version
+
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=api-version]
+////
+
+
+
+== SDK API Stability
+
+
+=== Interface Stability
+
+include::{version-common}@columnar-sdk:shared:partial$interface-stability-pars.adoc[tag=interface-stability-section]
+
+
+
+
+
+////
+=== Older SDK Versions
+
+include::{version-common}@columnar-sdk:shared:partial$archive.adoc[tag=link]
+////
+
+////
+Note the https://www.couchbase.com/support-policy[End of Life dates^] for {name-sdk} versions.
+See the notes there for Support details.
+////

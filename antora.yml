@@ -1,0 +1,21 @@
+name: python-analytics-sdk
+version: '1.0'
+title: Python Analytcis SDK
+start_page: hello-world:overview.adoc
+nav:
+- modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    page-nav-header-levels: 2
+    server_version: '8.0'
+    sdk_current_version: '1.0.0'
+    sdk_dot_minor: '1.0'
+    sdk_dot_major: '1.x'
+    version-server: '8.0'
+    version-common: '1.0'
+    name_platform: 'Python'
+    name-sdk: 'Python Analytics SDK'
+    sdk_api: '1.0'
+    sdk-api-link: https://docs.couchbase.com/sdk-api/analytics-python-client
+    sdk-gh-link: https://github.com/couchbaselabs/analytics-python-client

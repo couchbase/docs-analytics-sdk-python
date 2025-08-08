@@ -3,15 +3,12 @@
 :page-role: tiles
 :!sectids:
 
+
 = Python Analytics SDK
 
-
-
-
-
-The Analytics Python SDK allows you to connect to an xref:analytics:intro:intro.adoc[Enterprise Analytics] cluster from Python.
+The Analytics Python SDK allows you to connect to an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics] cluster from Python.
 For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operational --
-see our xref:go-sdk:hello-world:overview.adoc[Python Operational SDK].
+see our xref:python-sdk:hello-world:overview.adoc[Python Operational SDK].
 
 TIP: Connecting to a xref:columnar:intro:intro.adoc[_Capella_ Analytics] cluster from Python currently requires a xref:python-columnar-sdk:hello-world:overview.adoc[Python Columnar SDK].
 
@@ -91,7 +88,7 @@ Useful resources to help support your development experience with Columnar and t
 
 [.column]
 .Deployment Docs
-* xref:project-docs:sdk-release-notes.adoc[]
+* xref:project-docs:analytics-sdk-release-notes.adoc[]
 * xref:project-docs:compatibility.adoc[Compatibility]
 * xref:project-docs:sdk-full-installation.adoc[]
 

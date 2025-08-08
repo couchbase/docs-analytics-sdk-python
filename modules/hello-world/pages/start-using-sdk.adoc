@@ -1,4 +1,4 @@
-= Python SDK Quickstart Guide for Enterprise Analytics
+= {name-sdk} Quickstart Guide
 :page-toclevels: 2
 :description: Install, connect, try. A quick start guide to get you up and running with Enterprise Analytics and the {name-sdk}.
 
@@ -13,10 +13,15 @@ include::analytics-sdk:shared:partial$start-using-sdk.adoc[tag=intro]
 
 == Before You Start
 
+Install and configure an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics Cluster].
+
+////
 Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],
 and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
 
 You'll need to add your IP address to the allowlist, during the sign-up and cluster creation process (this can also be done at any time, via the UI, should the address change, or if you need to add a new one).
+////
+
 
 === Prerequisites
 
@@ -154,3 +159,11 @@ if __name__ == '__main__':
     loop = get_event_loop()
     loop.run_until_complete(main())
 ----
+
+
+
+=== Connection String
+
+The `connStr` in the above example should takes the form of "https://<your_hostname>:" + PORT.
+include::{version-common}@analytics-sdk:shared:partial$connstr.adoc[tag=connstr]
+

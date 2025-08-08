@@ -1,18 +1,18 @@
 # tag::overview[]
-from couchbase_columnar.cluster import Cluster
-from couchbase_columnar.credential import Credential
-from couchbase_columnar.options import QueryOptions
+from couchbase_analytics.cluster import Cluster
+from couchbase_analytics.credential import Credential
+from couchbase_analytics.options import QueryOptions
 
 
 def main() -> None:
     # Update this to your cluster
-    connstr = 'couchbases://--your-instance--'
+    endpoint = 'https://--your-instance--'
     username = 'username'
     pw = 'Password!123'
     # User Input ends here.
 
     cred = Credential.from_username_and_password(username, pw)
-    cluster = Cluster.create_instance(connstr, cred)
+    cluster = Cluster.create_instance(endpoint, cred)
 
     # Execute a query and buffer all result rows in client memory.
     statement = 'SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;'

@@ -1,19 +1,20 @@
 # tag::overview[]
-from acouchbase_columnar import get_event_loop
-from acouchbase_columnar.cluster import AsyncCluster
-from acouchbase_columnar.credential import Credential
-from acouchbase_columnar.options import QueryOptions
+import asyncio
+
+from acouchbase_analytics.cluster import AsyncCluster
+from acouchbase_analytics.credential import Credential
+from acouchbase_analytics.options import QueryOptions
 
 
 async def main() -> None:
     # Update this to your cluster
-    connstr = 'couchbases://--your-instance--'
+    endpoint = 'https://--your-instance--'
     username = 'username'
     pw = 'Password!123'
     # User Input ends here.
 
     cred = Credential.from_username_and_password(username, pw)
-    cluster = AsyncCluster.create_instance(connstr, cred)
+    cluster = AsyncCluster.create_instance(endpoint, cred)
 
     # Execute a query and buffer all result rows in client memory.
     statement = 'SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;'
@@ -47,6 +48,5 @@ async def main() -> None:
     print(f'metadata={res.metadata()}')
 
 if __name__ == '__main__':
-    loop = get_event_loop()
-    loop.run_until_complete(main())
+    asyncio.run(main())
 # end::overview[]

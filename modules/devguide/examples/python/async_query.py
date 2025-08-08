@@ -1,9 +1,8 @@
+import asyncio
+
 import utils
 
-from asyncio import get_event_loop
-
 cluster = utils.get_asyncio_cluster()
-
 
 async def main():
     print('======= BASIC QUERY ========')
@@ -45,7 +44,7 @@ async def main():
     print('======= POSITIONAL PARAMETERS ========')
 
     # tag::query-positional-params[]
-    from acouchbase_columnar.options import QueryOptions
+    from acouchbase_analytics.options import QueryOptions
 
     query = """
             SELECT airline, COUNT(*) AS route_count, AVG(route.distance) AS avg_route_distance
@@ -80,7 +79,6 @@ async def main():
 
 
 if __name__ == '__main__':
-    loop = get_event_loop()
-    loop.run_until_complete(main())
+    asyncio.run(main())
 
 

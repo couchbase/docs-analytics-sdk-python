@@ -1,4 +1,4 @@
-#  Copyright 2016-2024. Couchbase, Inc.
+#  Copyright 2016-2025. Couchbase, Inc.
 #  All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,32 +16,32 @@
 # tag::logging[]
 import logging
 
-import couchbase_columnar
-from couchbase_columnar.cluster import Cluster
-from couchbase_columnar.credential import Credential
+from couchbase_analytics import LOG_DATE_FORMAT, LOG_FORMAT
+from couchbase_analytics.cluster import Cluster
+from couchbase_analytics.credential import Credential
+
 
 # output log messages to example.log
 logging.basicConfig(filename='example.log',
                     filemode='w', 
                     level=logging.DEBUG,
-                    format='%(levelname)s::%(asctime)s::%(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S')
+                    format=LOG_FORMAT,
+                    datefmt=LOG_DATE_FORMAT)
 
 logger = logging.getLogger(__name__)
 # Good to set the logger's level because if the root level is not set, only WARNING level and above logs are output.
 logger.setLevel(logging.DEBUG)
-couchbase_columnar.configure_logging(logger.name, level=logger.level) 
 
 
 def main() -> None:
     # Update this to your cluster
-    connstr = 'couchbases://--your-instance--'
+    endpoint = 'https://--your-instance--'
     username = 'username'
     pw = 'Password!123'
     # User Input ends here.
 
     cred = Credential.from_username_and_password(username, pw)
-    cluster = Cluster.create_instance(connstr, cred)
+    cluster = Cluster.create_instance(endpoint, cred)
 
     # Execute a query and buffer all result rows in client memory.
     statement = 'SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;'

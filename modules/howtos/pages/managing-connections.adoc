@@ -55,7 +55,12 @@ NOTE: Capella's root certificate is *not* signed by a well known Certificate Aut
 However, the certificate is bundled with the SDK, and is automatically trusted unless you specify a different certificate to trust.
 
 
+== Connection Strings
 
+
+include::{version-common}@analytics-sdk:shared:partial$connstr.adoc[tag=more-connstr]
+
+////
 === Connection Strings
 
 A Couchbase connection string is a comma-delimited list of IP addresses and/or hostnames, optionally followed by a list of parameters.
@@ -70,6 +75,8 @@ for which the `couchbases://` schema is used as the root of the connection strin
 ----
 couchbases://cb.<your-endpoint>.cloud.couchbase.com
 ----
+////
+
 
 ////
 In a production environment, your connection string should include the addresses of multiple server nodes in case some are currently unavailable.

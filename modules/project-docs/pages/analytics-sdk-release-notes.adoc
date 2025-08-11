@@ -29,7 +29,7 @@ any changes to expected behavior are noted in the release notes that follow.
 
 === Version 1.0.0 (12 August 2025)
 
-This is the first General Availability (GA) release of the new Couchbase Analytics Python SDK.
+This is the first General Availability (GA) release of the new Analytics Python SDK.
 It supports executing queries against Enterprise Analytics clusters, with additional features planned for future releases.
 
 https://docs.couchbase.com/sdk-api/analytics-python-client-1.0.0/[API Reference]

@@ -13,7 +13,7 @@
 == Before You Start
 
 
-Set up an xref:analytics:intro:intro.adoc[Enterprise Analytics] cluster.
+Set up an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics] cluster.
 
 === Prerequisites
 

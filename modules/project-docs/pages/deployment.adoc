@@ -15,15 +15,12 @@
 
 
 
+One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as the Server. 
+// -- whether Capella, or your own self-managed cluster.
 
-
-
-
-One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as the Server -- whether Capella, or your own self-managed cluster.
-
-We always recommend the xref::sdk-release-notes.adoc#latest-release[latest version] of the SDK. 
-This not only contains the latest security updates and bug fixes, but will be compatible with the latest Couchbase Server release
-(note, Capella always runs a recent version of Couchbase Server).
+We always recommend the xref::analytics-sdk-release-notes.adoc#latest-release[latest version] of the SDK. 
+This not only contains the latest security updates and bug fixes, but will be compatible with the latest Enterprise Analytics release.
+// (note, Capella always runs a recent version of Couchbase Server).
 
 Before deploying, take note of any xref:compatibility.adoc[compatibility] issues for the language platform and underlying OS.
 The xref:sdk-full-installation.adoc[full installation guide] should cover any special cases for all supported environments.

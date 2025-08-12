@@ -1,6 +1,6 @@
 = Querying Your Data 
 :page-toclevels: 2
-:description: Querying Capella Columnar from the {name_platform} SDK, with {sqlpp}.
+:description: Querying Enterprise Analytics from the {name_platform} SDK, with {sqlpp}.
 
 
 // Note to editors
@@ -22,7 +22,7 @@
 == Real-Time Data Analysis
 
 Traditionally, analyzing JSON data in NoSQL databases requires complex transformations (like flattening) to prepare it for analytics, causing delays and hindering real-time insights.
-Capella Columnar eliminates these ETL complexities by unifying operational and analytical data stores into a single platform.
+Enterprise Analytics eliminates these ETL complexities by unifying operational and analytical data stores into a single platform.
 This enables Zero ETL, reducing costs, complexity, and improving time to insight.
 
 
@@ -32,4 +32,4 @@ Dive right in with our xref:howtos:sqlpp-queries-with-sdk.adoc[practical example
 
 // Parameterized queries
 
-// include::{version-common}@columnar-sdk:pages:partial$sqlpp.adoc[tag=options]
+// include::{version-common}@analytics-sdk:pages:partial$sqlpp.adoc[tag=options]

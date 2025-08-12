@@ -167,3 +167,9 @@ if __name__ == '__main__':
 The `connStr` in the above example should takes the form of "https://<your_hostname>:" + PORT.
 include::{version-common}@analytics-sdk:shared:partial$connstr.adoc[tag=connstr]
 
+
+
+
+== Migration from Row-Based Analytics
+
+include::analytics-sdk:shared:migration.adoc[tag=migration]

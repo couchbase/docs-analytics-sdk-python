@@ -1,6 +1,6 @@
 = Client Settings
 :description: Most settings can be changed through the connection string.
-//  :description: pass:q[The `ClusterEnvironment` class enables you to configure Columnar Java SDK options for security, timeouts, reliability, and performance.]
+//  :description: pass:q[The `ClusterEnvironment` class enables you to configure Python Analytics SDK options for security, timeouts, reliability, and performance.]
 :page-toclevels: 2
 
 
@@ -12,8 +12,7 @@ Settings are changed by adding them to the connection string, as in the followin
 
 .Connection string with two parameters
 ----
-couchbases://cb.<your-endpoint>.cloud.couchbase.com?timeout.connect_timeout=75s&timeout.query_timeout=100s
-s
+https://cb.<your-endpoint>.cloud.couchbase.com?timeout.connect_timeout=75s&timeout.query_timeout=100s
 ----
 
 // TODO add complete listings

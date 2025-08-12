@@ -1,6 +1,6 @@
 name: python-analytics-sdk
 version: '1.0'
-title: Python Analytcis SDK
+title: Python Analytics SDK
 start_page: hello-world:overview.adoc
 nav:
 - modules/ROOT/nav.adoc

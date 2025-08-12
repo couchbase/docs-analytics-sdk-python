@@ -13,8 +13,7 @@
 == Before You Start
 
 
-Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],
-and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
+Set up an xref:analytics:intro:intro.adoc[Enterprise Analytics] cluster.
 
 === Prerequisites
 
@@ -29,20 +28,20 @@ The SDK can be installed via `npm`:
 
 [source,console]
 ----
-python -m pip install couchbase-columnar
+python -m pip install couchbase-analytics
 ----
 
 
 
 == Other Installation Methods
 
-A select set of wheels is available on the https://github.com/couchbaselabs/columnar-python-client/releases[GitHub Releases page].
+A select set of wheels is available on the https://github.com/couchbase/analytics-python-client/releases[GitHub Releases page].
 If a wheel is not available for your specific Python version and/or platform,
-See the https://github.com/couchbaselabs/columnar-python-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
+See the https://github.com/couchbase/analytics-python-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
 === Installing from a Downloaded Package
 
-To install the SDK from a wheel on the https://github.com/couchbaselabs/columnar-python-client/releases[GitHub Releases page]:
+To install the SDK from a wheel on the https://github.com/couchbase/analytics-python-client/releases[GitHub Releases page]:
 
 . Download the appropriate wheel
 . Unzip the downloaded file
@@ -52,8 +51,6 @@ To install the SDK from a wheel on the https://github.com/couchbaselabs/columnar
 
 If a compatible wheel is not available, the SDK's binary will need to be built from source:
 
-* Follow the steps on the https://github.com/couchbaselabs/columnar-python-client/blob/main/BUILDING.md[GitHub Building page].
+* Follow the steps on the https://github.com/couchbase/analytics-python-client/blob/main/BUILDING.md[GitHub Building page].
 * After the build succeeds, the SDK can be used by running Python scripts from within the cloned repository -- 
 or the SDK can be installed via pip: `python3 -m pip install <path to cloned repository>`
-
-

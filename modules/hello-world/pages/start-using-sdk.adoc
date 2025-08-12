@@ -35,7 +35,7 @@ The SDK can be installed via `pip`:
 
 [source,console]
 ----
-python -m pip install couchbase-columnar
+python -m pip install couchbase-analytics
 ----
 
 For other installation methods, see the xref:project-docs:sdk-full-installation.adoc[installation page].
@@ -50,9 +50,9 @@ For other installation methods, see the xref:project-docs:sdk-full-installation.
 
 [source,python]
 ----
-from couchbase_columnar.cluster import Cluster
-from couchbase_columnar.credential import Credential
-from couchbase_columnar.options import (ClusterOptions,
+from couchbase_analytics.cluster import Cluster
+from couchbase_analytics.credential import Credential
+from couchbase_analytics.options import (ClusterOptions,
                                         QueryOptions,
                                         SecurityOptions)
 
@@ -106,10 +106,10 @@ if __name__ == '__main__':
 
 [source,python]
 ----
-from acouchbase_columnar import get_event_loop
-from acouchbase_columnar.cluster import AsyncCluster
-from couchbase_columnar.credential import Credential
-from couchbase_columnar.options import (ClusterOptions,
+from acouchbase_analytics import get_event_loop
+from acouchbase_analytics.cluster import AsyncCluster
+from couchbase_analytics.credential import Credential
+from couchbase_analytics.options import (ClusterOptions,
                                         QueryOptions,
                                         SecurityOptions)
 

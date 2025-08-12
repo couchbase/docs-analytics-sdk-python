@@ -5,7 +5,7 @@
 == Contributing
 
 Couchbase welcomes community contributions to the Python SDK.
-The https://github.com/couchbaselabs/columnar-python-client/tree/main[Python SDK source code^] is available on GitHub.
-Please see the https://github.com/couchbaselabs/columnar-python-client/blob/main/CONTRIBUTING.md[CONTRIBUTING^] file for further information.
+The https://github.com/couchbase/analytics-python-client/tree/main[Python SDK source code^] is available on GitHub.
+Please see the https://github.com/couchbase/analytics-python-client/blob/main/CONTRIBUTING.md[CONTRIBUTING^] file for further information.
 
-include::{version-common}@columnar-sdk:shared:partial$contrib.adoc[tag=contrib]
+include::{version-common}@analytics-sdk:shared:partial$contrib.adoc[tag=contrib]

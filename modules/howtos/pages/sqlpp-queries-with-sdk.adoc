@@ -138,7 +138,7 @@ include::devguide:example$python/async_query.py[tag=query-named-params,indent=0]
 
 == Using the Query Result
 
-Results from the Couchbase Columnar SDK can easily be used with several common Data Analytics Python libraries, 
+Results from the Couchbase Analytics SDK can easily be used with several common Data Analytics Python libraries, 
 including https://pandas.pydata.org/[Pandas] and https://arrow.apache.org/docs/python/index.html[PyArrow].
 
 [source,python]

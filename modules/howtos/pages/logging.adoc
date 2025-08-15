@@ -1,11 +1,11 @@
 = Logging
-:description: Logging with the Columnar Python SDK.
+:description: Logging with the Analytics Python SDK.
 
 
 [abstract]
 {description}
 
-The Columnar Python SDK allows logging via the standard `logging` module, or directly to the console.
+The Analytics Python SDK allows logging via the standard `logging` module, or directly to the console.
 
 
 == Enabling Logging
@@ -19,23 +19,23 @@ include::devguide:example$python/logging_example.py[tag=logging]
 
 == Logging via Environmental Settings
 
-IMPORTANT: Only one logger can be created.  Either use `PYCBCC_LOG_LEVEL` to create a console logger or python `logging`, as mentioned above.
+IMPORTANT: Only one logger can be created.  Either use `PYCBAC_LOG_LEVEL` to create a console logger or python `logging`, as mentioned above.
 
-In the command line environment, the PYCBCC_LOG_LEVEL variable is set as follows:
+In the command line environment, the PYCBAC_LOG_LEVEL variable is set as follows:
 
 .GNU/Linux and Mac
 [source,console]
 ----
-export PYCBCC_LOG_LEVEL=<log-level>
+export PYCBAC_LOG_LEVEL=<log-level>
 ----
 
 .Windows
 [source,console]
 ----
-set PYCBCC_LOG_LEVEL=<log-level>
+set PYCBAC_LOG_LEVEL=<log-level>
 ----
 
-Where `<log-level>` is either `error`, `warn`, `info`, `debug` or `trace`.
+Where `<log-level>` is either `error`, `warn`, `info`, or `debug`.
 
 
 == Log Levels
@@ -47,8 +47,7 @@ You can increase the log level for greater verbosity (more information) in the l
 * error -- error messages.
 * warn -- error notifications.
 * info -- useful notices, not often.
-* debug -- diagnostic information, minimum level required to investigate problems.
-* trace -- detailed diagnostic information, often required to investigate problems.
+* debug -- diagnostic information (level required to investigate problems).
 
 ////
 == Log Redaction

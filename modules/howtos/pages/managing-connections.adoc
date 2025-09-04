@@ -13,7 +13,7 @@
 
 [abstract]
 {description}
-It contains best practices as well as information on TLS/SSL and advanced connection options, and a sub-page on troubleshooting Cloud connections.
+It contains best practices as well as information on TLS/SSL and advanced connection options.
 
 
 Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to an Enterprise Analytics cluster.
@@ -222,14 +222,3 @@ NOTE: Any TLS certificates must be set up at the point where the connections are
 We strongly recommend that the client and server xref:project-docs:compatibility.adoc#network-requirements[are in the same LAN-like environment] (e.g. AWS Region).
 As this may not always be possible during development, read the guidance on working with xref:ref:client-settings.adoc#commonly-used-options[constrained network environments].
 // More details on connecting your client code to Couchbase Capella can be found xref:cloud:clouds:connect-an-sdk.adoc#connecting-your-sdk-to-capella[in the Capella Operational docs].
-
-
-
-=== Troubleshooting Connections to Cloud
-
-////
-Some DNS caching providers (notably, home routers) can’t handle an SRV record that’s large -- if you have DNS-SRV issues with such a set-up, reduce your DNS-SRV to only include three records.
-[_For development only, not production._]. 
-////
-
-Our xref:troubleshooting-connections.adoc[Troubleshooting Connections] page will help you to diagnose some problems encountered if your test cluster is in a remote data center, but you are developing on a local laptop -- as well as introducing the SDK doctor tool.

@@ -149,8 +149,8 @@ The following table lists them all:
 | Name       | Description
 | `client_context_id: Optional[str]` | An optional identifier for the query.
 | `deserializer: Optional[Deserializer]` | Sets the deserializer applied to results. If not specified, defaults to the cluster's default deserializer, `DefaultJsonDeserializer`.
-| `named_parameters: Optional[Dict[str, JSONType]]` | Values to use for positional placeholders in query.
-| `positional_parameters: Optional[Iterable[JSONType]]` | Values to use for named placeholders in query.
+| `named_parameters: Optional[Dict[str, JSONType]]` | Values to use for named placeholders in query.
+| `positional_parameters: Optional[Iterable[JSONType]]` | Values to use for positional placeholders in query.
 | `query_context: Optional[str]` | Specifies the context within which this query should be executed.
 | `raw: Optional[Dict[str, Any]]` | Specifies any additional parameters which should be passed to the Analytics engine when executing the query.
 | `readonly: Optional[bool]` | Specifies that this query should be executed in read-only mode, disabling the ability for the query to make any changes to the data.

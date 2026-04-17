@@ -20,13 +20,32 @@ See the xref:project-docs:sdk-full-installation.adoc[Full Installation] guide fo
 
 
 [#latest-release]
-== Python Analytics SDK 1.0 Releases
+== Python Analytics SDK 1.1 Releases
 
 We always recommend using the latest version of the SDK -- it contains all of the latest security patches and support for new and upcoming features.
 All patch releases for each dot minor release should be API compatible, and safe to upgrade;
 any changes to expected behavior are noted in the release notes that follow.
 
 
+
+
+[[v1.1.0]]
+=== Version 1.1.0 (?? 2026)
+
+This is the first release of the 1.1 Analytics Python SDK dotminor. 
+
+
+
+
+
+
+
+
+
+
+== Python Analytics SDK 1.0 Releases
+
+[[v1.0.0]]
 === Version 1.0.0 (12 August 2025)
 
 This is the first General Availability (GA) release of the new Analytics Python SDK.

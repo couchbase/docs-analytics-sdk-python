@@ -1,11 +1,11 @@
 = Couchbase Analytics Python SDK Documentation
 
 This repository hosts the documentation source for the
-https://docs.couchbase.com/python-analytics-sdk/1.0/hello-world/overview.html[Analytics Python SDK Documentation].
+https://docs.couchbase.com/python-analytics-sdk/1.1/hello-world/overview.html[Analytics Python SDK Documentation].
 
 
-This branch documents the 1.0 release of the SDK.
-It follows the https://docs.couchbase.com/python-analytics-sdk/1.0/project-docs/compatibility.html#api-version[SDK 1.0 API].
+This branch documents the 1.1 release of the SDK.
+It follows the https://docs.couchbase.com/python-analytics-sdk/1.1/project-docs/compatibility.html#api-version[SDK 1.1 API].
 
 
 == Contributing
@@ -117,13 +117,11 @@ A value of `3` should not be used, save in exceptionally complicated pages like 
 Update the following files:
 
 * antora.yml
-* build.gradle
-* modules/devguide/examples/scala/pom.xml
 * modules/project-docs/pages/sdk-release-notes.adoc
 
 === New Branches
 
-Production branches use the *release/x.y* naming pattern (e.g. `release/3.7`, `release/3.6`).
+Production branches use the *release/x.y* naming pattern (e.g. `release/1.1`, `release/1.0`).
 Antora uses the branch names in the playbook, but also uses the `version` given in the antor.yml file, to create the version navigation -- so this version number must be unique within the repo for any branches included in the playbook.
 When creating a new branch for a new release, remember to update the antora.yml file before trying to build.
 
@@ -134,5 +132,5 @@ This is in the process of being changed -- documentation will appear here once t
 
 == Docs License
 
-©2025 Couchbase, Inc.
+©2026 Couchbase, Inc.
 This work is licensed under https://creativecommons.org/licenses/by-nc-sa/4.0/[CC BY-NC-SA 4.0].

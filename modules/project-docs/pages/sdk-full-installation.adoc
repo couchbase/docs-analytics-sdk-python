@@ -17,7 +17,7 @@ Set up an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics] clust
 
 === Prerequisites
 
-Currently Python 3.9 - Python 3.13 is supported.
+Currently Python 3.10 - Python 3.14 is supported.
 See the xref:project-docs:compatibility.adoc#platform-compatibility[compatibility page] for more information about platform support.
 
 

@@ -42,8 +42,9 @@ include::{sdk_api}@analytics-sdk:shared:partial$network-requirements.adoc[tag=la
 
 == Enterprise Analytics Compatibility
 
-This is the initial release of Enterprise Analytics and the Analytics SDKs.
-As such, the Analytics SDK is fully compatible with Enterprise Analytics.
+The 1.1 releases of the Analytics SDK is fully compatible with currently supported releases of Enterprise Analytics - `1.0` and `1.1`.
+The 1.1 Python SDK also supports an asynchronous (streaming) API update for a forthcoming release of self-managed Enterprise Analytics Server.
+
 
 ////
 is a fully hosted service, continually updated, and offering the latest version --
@@ -54,7 +55,7 @@ Where older versions of the {name-sdk} pre-date significant new features in Colu
 
 
 
-
+// add when 2.2 EA Server released
 ////
 === API Version
 
@@ -75,7 +76,7 @@ include::{version-common}@analytics-sdk:shared:partial$interface-stability-pars.
 
 
 ////
-=== Older SDK Versions
+=== Older Analytics SDK Versions
 
 include::{version-common}@analytics-sdk:shared:partial$archive.adoc[tag=link]
 ////

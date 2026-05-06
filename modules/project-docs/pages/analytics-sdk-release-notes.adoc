@@ -30,12 +30,15 @@ any changes to expected behavior are noted in the release notes that follow.
 
 
 [[v1.1.0]]
-=== Version 1.1.0 (?? 2026)
+=== Version 1.1.0 (?? May 2026)
 
-This is the first release of the 1.1 Analytics Python SDK dotminor. 
+This is the first release of the 1.1 series Analytics Python SDK.
 
+The 1.1 Analytics SDKs add support for JWT and client certificate authentication,
+as well as a new “async” poll-based API that uses request handles to fetch results,
+eliminating the need for long-running server connections (compatible with a future release of the Enterprise Analytics server).
 
-
+https://docs.couchbase.com/sdk-api/analytics-python-client-1.1.0/[API Reference]
 
 
 

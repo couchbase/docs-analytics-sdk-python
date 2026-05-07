@@ -77,7 +77,7 @@ In a future release, the Enterprise Analytics Server will offer an asynchronous 
 The SDK will send a request, poll for results, and then fetch once the result is available.
 The SDK supports each stage of this information flow:
 
-`cluster.start_query()` → QueryHandle` → `QueryStatus` → `QueryResultsHandle`
+`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultsHandle`
 
 .Server Asynchronous API Example
 [source,python]

@@ -51,7 +51,7 @@ The 1.1 Python SDK also supports an asynchronous (streaming) API update for a fo
 These releases add support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results, eliminating the need for long-running server connections.
 
 
-The examples below are for the standard API, working with the current 2.0 and 2.1 releases of Enterprise Analytics.
+The examples in this are for the standard API, working with the current 2.0 and 2.1 releases of Enterprise Analytics, with an example for the forthcoming API given later in the page.
 Note, you will still be able to use this API with forthcoming 2.x releases of Enterprise Analytics, in addition to the forthcoming new API.
 
 
@@ -71,9 +71,9 @@ include::devguide:example$python/overview.py[tags=*]
 include::devguide:example$python/async_overview.py[tags=*]
 ----
 
-=== Server Asynchronous API (with Python blocking API)
+== Server Asynchronous API (with Python Blocking API)
 
-In a future release, the Enterprise Analytics Server will offer an asynchronous request API.
+In a future release, the Enterprise Analytics Server is expected to offer an asynchronous request API.
 The SDK will send a request, poll for results, and then fetch once the result is available.
 The SDK supports each stage of this information flow:
 

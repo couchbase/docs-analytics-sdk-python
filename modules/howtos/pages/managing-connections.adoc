@@ -129,6 +129,41 @@ This default `ClusterEnvironment` is managed completely by the Scala SDK, and is
 ////
 
 
+
+
+=== JSON Web Tokens (JWT)
+
+From the 1.1 SDK (with Enterprise Analytics Server 2.2+) JWT is supported.
+
+
+
+
+
+
+
+
+=== Certificate Authentication
+
+From the 1.1 SDK (with Enterprise Analytics Server 2.2+) certificate authentication is supported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////
 === Connection Lifecycle
 

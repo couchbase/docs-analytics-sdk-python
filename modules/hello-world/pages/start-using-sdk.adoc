@@ -35,7 +35,7 @@ The SDK can be installed via `pip`:
 
 [source,console]
 ----
-python -m pip install couchbase-analytics
+$ python3 -m pip install couchbase-analytics
 ----
 
 For other installation methods, see the xref:project-docs:sdk-full-installation.adoc[installation page].
@@ -46,13 +46,14 @@ For other installation methods, see the xref:project-docs:sdk-full-installation.
 == Connecting and Executing a Query
 
 
-The 1.1 Python SDK also supports an asynchronous (streaming) API update for a forthcoming release of self-managed Enterprise Analytics Server.
+The 1.1 Python SDK also supports an asynchronous (streaming) API update in the 2.2 release of self-managed Enterprise Analytics Server.
 
 These releases add support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results, eliminating the need for long-running server connections.
 
 
-The examples in this section are for the standard API, working with the current 2.0 and 2.1 releases of Enterprise Analytics, with an example for the forthcoming API given later in the page.
-Note, you will still be able to use this API with forthcoming 2.x releases of Enterprise Analytics, in addition to the forthcoming new API.
+
+The examples in this section are for the standard API - with blocking and async client-side APIs- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api-with-python-blocking-api,Server Async section>>).
+Note, you will still be able to use this API with 2.2+ releases of Enterprise Analytics, in addition to the new API.
 
 
 === Synchronous API

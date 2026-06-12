@@ -50,47 +50,11 @@ def main() -> None:
     cluster = Cluster.create_instance(connstr, cred, opts)
 ----
 
-////
-NOTE: Capella's root certificate is *not* signed by a well known Certificate Authority.
-However, the certificate is bundled with the SDK, and is automatically trusted unless you specify a different certificate to trust.
-////
-
 
 == Connection Strings
 
 
 include::{version-common}@analytics-sdk:shared:partial$connstr.adoc[tag=more-connstr]
-
-////
-=== Connection Strings
-
-A Couchbase connection string is a comma-delimited list of IP addresses and/or hostnames, optionally followed by a list of parameters.
-
-The parameter list is just like the query component of a URI; name-value pairs have an equals sign (`=`) separating the name and value, with an ampersand (`&`) between each pair.
-Just as in a URI, the first parameter is prefixed by a question mark (`?`).
-
-For Columnar, as for all Capella products, connection must be made with Transport Layer Security (TLS) -- for full encryption of client-side traffic --
-for which the `couchbases://` schema is used as the root of the connection string (note the trailing *s*).
-
-.Simple connection string with one seed node
-----
-couchbases://cb.<your-endpoint>.cloud.couchbase.com
-----
-////
-
-
-////
-In a production environment, your connection string should include the addresses of multiple server nodes in case some are currently unavailable.
-Multiple addresses may be specified in a connection string by delimiting them with commas:
-
-.Connection string with two seed nodes
-----
-nodeA.example.com,nodeB.example.com
-----
-
-TIP: You don't need to include the address of every node in the cluster.
-The client fetches the full address list from the first node it is able to contact.
-////
 
 
 .Connection string with two parameters
@@ -101,64 +65,60 @@ https://analytics.example.com?timeout.connect_timeout=75s&timeout.query_timeout=
 The full list of recognized parameters is documented in the xref:ref:client-settings.adoc[client settings reference].
 
 
-////
-Any client setting with a system property name may also be specified as a connection string parameter (without the `com.couchbase.env.` prefix).
 
-WARNING: When creating a `Cluster` using a custom `ClusterEnvironment`, *_connection string parameters are ignored_*, since client settings are frozen when the cluster environment is built.
-////
+== Authentication by Credential
+
+Similarly to the `Authenticator` abstraction in Couchbase Operational SDKs, Analytics SDKs use a `Credential` abstraction covering regular password authentication (Basic Access Authentication), JSON Web Tokens (JWT), and Client Certificates through mTLS.
+
+Basic Access Authentication is shown in the example <<#connecting-to-a-cluster,above>>.
 
 
-////
-=== Cluster Environment
+=== JSON Web Tokens (JWT)
 
-A `ClusterEnvironment` manages shared resources like thread pools, timers, and schedulers.
-It also holds the client settings.
-One way to customize the client's behavior is to build your own `ClusterEnvironment` with custom settings:
+From the 1.1 SDK (with Enterprise Analytics Server 2.2+) JWT is supported.
 
-[source,scala]
+[source,python]
 ----
-include::devguide:example$scala/ManagingConnections.scala[tag=env,indent=0]
-----
-
-This is a verbose example for simplicity, and the user may prefer to use `flatMap` or a for-comprehension to combine the multiple `Try`.
-
-Note there are `com.couchbase.client.scala.env` and `com.couchbase.client.core.env` versions of all environment parameters: be sure to import the `.scala` versions.
-
-TIP: If you create a `Cluster` without specifying a custom environment, the client creates a default environment used exclusively by that `Cluster`.
-This default `ClusterEnvironment` is managed completely by the Scala SDK, and is automatically shut down when the associated `Cluster` is disconnected.
-////
-
-
-////
-=== Connection Lifecycle
-
-Most of the high-level classes in the Scala SDK are designed to be safe for concurrent use by multiple threads.
-You will get the best performance if you share and reuse instances of `ClusterEnvironment`, `Cluster`, `Bucket`, `Scope`, and `Collection`, all of which are thread-safe.
-
-We recommend creating a single `Cluster` instance when your application starts up, and sharing this instance throughout your application.
-If you know at startup time which buckets, scopes, and collections your application will use, we recommend obtaining them from the `Cluster` at startup time and sharing those instances throughout your application as well.
-
-Before your application stops, gracefully shut down the client by calling the `disconnect()` method of each `Cluster` you created.
-If you created any `ClusterEnvironment` instances, call their `shutdown()` method after disconnecting the associated clusters.
-////
-
-
-
-////
-[#multiple-clusters]
-=== Connecting to Multiple Clusters
-
-If a single application needs to connect to multiple Couchbase Server clusters, we recommend creating a single `ClusterEnvironment` and sharing it between the `Clusters`.
-We will use a for-comprehension here to avoid excessive `Try` juggling.
-
-[source,scala]
-----
-include::devguide:example$scala/ManagingConnections.scala[tag=shared,indent=0]
+def main() -> None:
+    _EXAMPLE_JWT = 'eyJhbGbiOiJSUzI1NiIsInR5cCI6IkpXVCJ9.payload.signature'
+    endpoint = 'https://--your-instance--'
+    cred = Credential.from_jwt(_EXAMPLE_JWT)
+    cluster = Cluster.create_instance(endpoint, cred)
 ----
 
-Remember, whenever you manually create a `ClusterEnvironment` like this, the SDK will not shut it down when you call `Cluster.disconnect()`.
-Instead you are responsible for shutting it down after disconnecting all clusters that share the environment.
+
+
+=== Certificate Authentication
+
+From the 1.1 Analytics SDK (with Enterprise Analytics Server 2.2+) certificate authentication is supported.
+A conceptual and architectural overview of Enterprise Analytics's support of X.509 certificates is provided in the xref:{version-server}@server:learn:security/certificates.adoc[Server certificates docs].
+Practical information on handling certificates can be found in the xref:{version-ea}@enterprise-analytics:manage:manage-security/manage-certificates.adoc[Enterprise Analytics certificates docs].
+
+The Analytics SDK authenticates the client during the TLS handshake.
+The SDK reads the certificate and private key from a `PKCS#12` file:
+
+[source,python]
+----
+clientdir = "etc/x509-cert/SSLCA/clientdir"
+endpoint = 'https://--your-instance--'
+cred = Credential.from_certificate(os.path.join(clientdir, "client.pem"),
+                                   os.path.join(clientdir, "client.key"))
+cluster = Cluster.create_instance(endpoint, cred)
+----
+
+
 ////
+// keeping the **options dict example for the future:
+----
+clientdir = "etc/x509-cert/SSLCA/clientdir"
+options = dict(cert_path=os.path.join(clientdir, "client.pem"),
+               key_path=os.path.join(clientdir, "client.key"))
+endpoint = 'https://--your-instance--'
+cred = Credential.from_certificate(**options)
+cluster = Cluster.create_instance(endpoint, cred)
+----
+////
+
 
 
 
@@ -212,6 +172,10 @@ If the detection heuristic fails in your environment, you can override it by set
 
 NOTE: Any TLS certificates must be set up at the point where the connections are being made.
 ////
+
+
+
+
 
 
 

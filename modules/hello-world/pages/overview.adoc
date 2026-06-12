@@ -4,7 +4,7 @@
 :!sectids:
 
 
-= Python Analytics SDK
+= Python Analytics SDK {sdk_dot_minor}
 
 The Analytics Python SDK allows you to connect to an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics] cluster from Python.
 For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operational --

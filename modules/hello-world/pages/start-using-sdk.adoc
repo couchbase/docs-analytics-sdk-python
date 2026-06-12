@@ -45,14 +45,9 @@ For other installation methods, see the xref:project-docs:sdk-full-installation.
 [quickstart]
 == Connecting and Executing a Query
 
+The 1.1 Python Analytics SDK adds support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results, introduced in the 2.2 release of self-managed Enterprise Analytics Server, and eliminating the need for long-running server connections.
 
-The 1.1 Python SDK also supports an asynchronous (streaming) API update in the 2.2 release of self-managed Enterprise Analytics Server.
-
-These releases add support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results, eliminating the need for long-running server connections.
-
-
-
-The examples in this section are for the standard API - with blocking and async client-side APIs- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api-with-python-blocking-api,Server Async section>>).
+The examples in this section are for the standard API -- with blocking and async client-side APIs -- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api-with-python-blocking-api,Server Async section>>).
 Note, you will still be able to use this API with 2.2+ releases of Enterprise Analytics, in addition to the new API.
 
 

@@ -100,16 +100,24 @@ The SDK reads the certificate and private key from a `PKCS#12` file:
 [source,python]
 ----
 clientdir = "etc/x509-cert/SSLCA/clientdir"
-options = dict(cert_path=os.path.join(clientdir, "client.pem"),
-               trust_store_path=os.path.join(clientdir, "trust.pem"),
-               key_path=os.path.join(clientdir, "client.key"))
-opts = ClusterOptions(CertificateAuthenticator(**options))
-cluster = Cluster.create_instance(endpoint, opts)
+endpoint = 'https://--your-instance--'
+cred = Credential.from_certificate(os.path.join(clientdir, "client.pem"),
+                                   os.path.join(clientdir, "client.key"))
+cluster = Cluster.create_instance(endpoint, cred)
 ----
 
 
-
-
+////
+// keeping the **options dict example for the future:
+----
+clientdir = "etc/x509-cert/SSLCA/clientdir"
+options = dict(cert_path=os.path.join(clientdir, "client.pem"),
+               key_path=os.path.join(clientdir, "client.key"))
+endpoint = 'https://--your-instance--'
+cred = Credential.from_certificate(**options)
+cluster = Cluster.create_instance(endpoint, cred)
+----
+////
 
 
 

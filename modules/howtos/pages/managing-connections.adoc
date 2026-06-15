@@ -57,14 +57,6 @@ def main() -> None:
 include::{version-common}@analytics-sdk:shared:partial$connstr.adoc[tag=more-connstr]
 
 
-.Connection string with two parameters
-----
-https://analytics.example.com?timeout.connect_timeout=75s&timeout.query_timeout=100s
-----
-
-The full list of recognized parameters is documented in the xref:ref:client-settings.adoc[client settings reference].
-
-
 
 == Authentication by Credential
 

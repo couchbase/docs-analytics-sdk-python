@@ -13,9 +13,8 @@ For a deeper look at the concepts, to help you better understand the Query Servi
 
 
 
-
-Here we show queries against the Travel Sample collection, at cluster and scope level,
-and give links to information on adding other collections to your data.
+// Here we show queries against the Travel Sample collection, at cluster and scope level,
+// and give links to information on adding other collections to your data.
 // kafka
 // postgres
 // capella
@@ -23,11 +22,10 @@ and give links to information on adding other collections to your data.
 
 == Before You Start
 
-This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], and created an xref:enterprise-analytics:install:introduction-linux-installation.adoc[Enterprise Analytics cluster].
-// added your IP address to the allowlist, and xref:columnar:admin:prepare-project.adoc#cluster[created a Columnar cluster].
 
-Create a collection to work upon by xref:enterprise-analytics:intro:connecting-to-data-sources.adoc#import-the-travel-sample-collections[importing the travel-sample dataset] into your cluster.
+This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], added your IP address to the allowlist, and xref:analytics:manage:manage-nodes/create-cluster.adoc#cluster[created an Enterprise Analytics cluster].
 
+Create a collection to work upon by xref:analytics:intro:connecting-to-data-sources.adoc#import-the-travel-sample-collections[importing the travel-sample dataset] into your cluster.
 
 
 == Querying Your Dataset
@@ -36,9 +34,10 @@ Create a collection to work upon by xref:enterprise-analytics:intro:connecting-t
 [TIP]
 .API Enhancements & Async
 ====
-The 1.1 Python Analytics SDK adds support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results, introduced in the 2.2 release of self-managed Enterprise Analytics Server, and eliminating the need for long-running server connections.
+The 1.1 {name-sdk} adds support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results.
+Introduced in the 2.2 release of self-managed Enterprise Analytics Server, this API eliminates the need for long-running server connections.
 
-The examples in this section are for the standard API -- with blocking and async client-side APIs -- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api-with-python-blocking-api,Server Async section>>).
+The examples in this first section of the page are for the standard API -- async on the client side -- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api,Server Async section>>).
 Note, you will still be able to use this API with 2.2+ releases of Enterprise Analytics, in addition to the new API.
 ====
 
@@ -269,5 +268,5 @@ if __name__ == '__main__':
 
 == Further Information
 
-The xref:server:analytics:1_intro.adoc[{sqlpp} for Analytics Reference]
+The xref:analytics:sqlpp:1_intro.adoc[{sqlpp} for Analytics Reference]
 offers a complete guide to the {sqlpp} language for both of our analytics services, including all of the latest additions.

@@ -131,5 +131,5 @@ This includes well known CAs (including GoDaddy and Verisign), plus any other CA
 
 
 We strongly recommend that the client and server xref:project-docs:compatibility.adoc#network-requirements[are in the same LAN-like environment] (e.g. AWS Region).
-As this may not always be possible during development, read the guidance on working with xref:ref:client-settings.adoc#commonly-used-options[constrained network environments].
+// As this may not always be possible during development, read the guidance on working with xref:ref:client-settings.adoc#commonly-used-options[constrained network environments].
 // More details on connecting your client code to Couchbase Capella can be found xref:cloud:clouds:connect-an-sdk.adoc#connecting-your-sdk-to-capella[in the Capella Operational docs].

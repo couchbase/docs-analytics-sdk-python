@@ -73,7 +73,7 @@ include::devguide:example$python/async_overview.py[tags=*]
 == Server Asynchronous API (with Python Blocking API)
 
 
-In the 2.2 release, the Enterprise Analytics Server introduces an asynchronous request API.
+Enterprise Analytics 2.2 introduces an asynchronous request API.
 The SDK sends a request, polls for results, and then fetches once the result is available.
 The SDK supports each stage of this information flow:
 

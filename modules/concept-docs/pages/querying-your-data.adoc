@@ -39,7 +39,7 @@ This xref:{version-ea}@enterprise-analytics:intro:intro.adoc[Server Asynchronous
 After the query request is submitted, clients can monitor the status of the request and on successful execution of query, opt to stream the results of the query.
 This way the connection between SDK client and Analytics Server does not stay open for the long duration of query processing, and isonly needed for result set streaming.
 
-`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultsHandle`
+`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultHandle`
 
 This information flow can be seen in the sample code in the
 xref:howtos:sqlpp-queries-with-sdk.adoc#server-asynchronous-api-with-python-blocking-api[{sqlpp} queries section].

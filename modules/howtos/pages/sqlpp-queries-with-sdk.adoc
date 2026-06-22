@@ -186,14 +186,11 @@ include::devguide:example$python/third_party.py[tag=pyarrow,indent=0]
 ----
 
 
-[[#server-asynchronous-api]]
+[[server-asynchronous-api]]
 == {async-server-api-feature-name} (with Python Blocking API)
 
 Enterprise Analytics Server 2.2 adds a{async-server-api-feature-name}.
 The SDK will send a request, poll for results, and then fetch once the result is available.
-The SDK supports each stage of this information flow:
-
-`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultHandle`
 
 .Server Asynchronous API Example
 [source,python]

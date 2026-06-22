@@ -43,7 +43,7 @@ include::{sdk_api}@analytics-sdk:shared:partial$network-requirements.adoc[tag=la
 == Enterprise Analytics Compatibility
 
 The 1.1 releases of the Analytics SDK is fully compatible with all currently supported releases of Enterprise Analytics.
-The 1.1 Python SDK also supports an asynchronous (streaming) API update in the latest (2.2) release of self-managed Enterprise Analytics Server.
+The 1.1 {name_platform} SDK also supports the poll-based {async-server-api-feature-name} introduced in self-managed Enterprise Analytics Server 2.2.
 
 
 ////

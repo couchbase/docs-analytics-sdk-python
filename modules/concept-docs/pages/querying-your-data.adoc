@@ -30,10 +30,10 @@ This enables Zero ETL, reducing costs, complexity, and improving time to insight
 
 == Long Running Queries
 
-All versions of Enterpries Analytics support client-side async requests.
+All versions of Enterprise Analytics support long running client-side requests.
 This process keeps a connection live between client and server for long running queries.
-For such long running queries, a better mechanism is for the client to trigger an async query without holding a connection to the server open for the duration of the query execution. 
-This Server Asynchronous API is introduced in Enterprise Analytics Server 2.2.
+For such long running queries, a better mechanism is for the client to trigger an asynchronous query without holding a connection to the server open for the duration of the query execution. 
+This {async-server-api-feature-name} is introduced in Enterprise Analytics Server 2.2.
 For more information, see xref:{version-ea}@enterprise-analytics:reference:rest-analytics.adoc[].
 
 After the query request is submitted, clients can monitor the status of the request and on successful execution of query, opt to stream the results of the query.

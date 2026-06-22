@@ -34,10 +34,10 @@ Create a collection to work upon by xref:analytics:intro:connecting-to-data-sour
 [TIP]
 .API Enhancements & Async
 ====
-The 1.1 {name-sdk} adds support for JWT and client certificate authentication, as well as a new "async" poll-based API that uses request handles to fetch results.
-Introduced in the 2.2 release of self-managed Enterprise Analytics Server, this API eliminates the need for long-running server connections.
+The 1.1 {name-sdk} adds support for JWT and client certificate authentication, as well as a new poll-based {async-server-api-feature-name} that uses request handles to fetch results.
+Introduced in self-managed Enterprise Analytics Server 2.2, this API eliminates the need for long-running server connections.
 
-The examples in this first section of the page are for the standard API -- async on the client side -- working with all 2.x releases of Enterprise Analytics (with Server Async examples following in the <<#server-asynchronous-api,Server Async section>>).
+The examples in this first section of the page are for the standard API, working with all 2.x releases of Enterprise Analytics (with {async-server-api-feature-name} examples following in the <<#server-asynchronous-api,Server Async section>>).
 Note, you will still be able to use this API with 2.2+ releases of Enterprise Analytics, in addition to the new API.
 ====
 
@@ -186,9 +186,10 @@ include::devguide:example$python/third_party.py[tag=pyarrow,indent=0]
 ----
 
 
-== Server Asynchronous API (with Python Blocking API)
+[[#server-asynchronous-api]]
+== {async-server-api-feature-name} (with Python Blocking API)
 
-In the 2.2 release, the Enterprise Analytics Server adds an asynchronous request API.
+Enterprise Analytics Server 2.2 adds a{async-server-api-feature-name}.
 The SDK will send a request, poll for results, and then fetch once the result is available.
 The SDK supports each stage of this information flow:
 

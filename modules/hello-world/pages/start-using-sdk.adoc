@@ -53,13 +53,15 @@ You can still use this API with Enterprise Analytics 2.2 and later, in addition 
 
 === Server Synchronous Request API
 
+==== Client Synchronous API
+
 .Blocking API Example
 [source,python]
 ----
 include::devguide:example$python/overview.py[tags=*]
 ----
 
-=== Python Asynchronous API with asyncio
+==== Python Asynchronous API with asyncio
 
 .asyncio Example
 [source,python]
@@ -73,6 +75,8 @@ include::devguide:example$python/async_overview.py[tags=*]
 
 Enterprise Analytics 2.2 introduces a {async-server-api-feature-name}.
 The SDK sends a request, polls for results, and then fetches once the result is available.
+The SDK supports each stage of this information flow:
+
 
 .Server Asynchronous API Example
 [source,python]

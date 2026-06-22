@@ -30,7 +30,6 @@ This enables Zero ETL, reducing costs, complexity, and improving time to insight
 
 == Long Running Queries
 
-
 All versions of Enterprise Analytics support long running client-side requests.
 This process keeps a connection live between client and server for long running queries.
 For such long running queries, a better mechanism is for the client to trigger an asynchronous query without holding a connection to the server open for the duration of the query execution. 
@@ -40,7 +39,7 @@ For more information, see xref:{version-ea}@enterprise-analytics:reference:rest-
 After the query request is submitted, clients can monitor the status of the request and on successful execution of query, opt to stream the results of the query.
 This way the connection between SDK client and Analytics Server does not stay open for the long duration of query processing, and isonly needed for result set streaming.
 
-`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultsHandle`
+`cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultHandle`
 
 This information flow can be seen in the sample code in the
 xref:howtos:sqlpp-queries-with-sdk.adoc#server-asynchronous-api-with-python-blocking-api[{sqlpp} queries section].

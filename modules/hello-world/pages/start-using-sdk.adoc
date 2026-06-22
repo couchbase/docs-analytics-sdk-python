@@ -1,5 +1,5 @@
 = {name-sdk} Quickstart Guide
-:page-toclevels: 2
+:page-toclevels: 3
 :description: Install, connect, try. A quick start guide to get you up and running with Enterprise Analytics and the {name-sdk}.
 
 [abstract]

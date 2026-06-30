@@ -34,7 +34,7 @@ from couchbase_analytics.options import (ClusterOptions,
 
 A connection to an Enterprise Analytics cluster is represented by a `Cluster` object.
 // A `Cluster` provides access to databases, scopes, and collections, as well as various Analytics services and management interfaces.
-The simplest way to create a `Cluster` object is to call `Cluster.createnstance()` with a <<connection-strings, connection string>>, user credentials, and any optional settings:
+The simplest way to create a `Cluster` object is to call `Cluster.create_instance()` with a <<connection-strings, connection string>>, user credentials, and any optional settings:
 
 
 [source,python]

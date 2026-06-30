@@ -24,7 +24,7 @@ See xref:{version-ea}@enterprise-analytics:sqlpp:1_intro.adoc[].
 
 Traditionally, analyzing JSON data in NoSQL databases requires complex transformations (like flattening) to prepare it for analytics, causing delays and hindering real-time insights.
 Enterprise Analytics eliminates these ETL complexities by unifying operational and analytical data stores into a single platform.
-This enables Zero ETL, reducing costs, complexity, and improving time to insight.
+This enables Zero ETL, reducing costs and complexity, and improving time to insight.
 
 
 
@@ -37,7 +37,7 @@ This {async-server-api-feature-name} is introduced in Enterprise Analytics Serve
 For more information, see xref:{version-ea}@enterprise-analytics:reference:rest-analytics.adoc[].
 
 After the query request is submitted, clients can monitor the status of the request and on successful execution of query, opt to stream the results of the query.
-This way the connection between SDK client and Analytics Server does not stay open for the long duration of query processing, and isonly needed for result set streaming.
+This way the connection between SDK client and Analytics Server does not stay open for the long duration of query processing, and is only needed for result set streaming.
 
 `cluster.start_query()` → `QueryHandle` → `QueryStatus` → `QueryResultHandle`
 

@@ -30,7 +30,7 @@ any changes to expected behavior are noted in the release notes that follow.
 
 
 [[v1.1.0]]
-=== Version 1.1.0 (?? June 2026)
+=== Version 1.1.0 (26 June 2026)
 
 This is the first release of the 1.1 series Analytics Python SDK.
 

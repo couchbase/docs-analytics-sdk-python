@@ -1,5 +1,5 @@
 = Analytics SDK Release Notes
-:description: Release notes, brief installation instructions, and download archive for the Enterprise Analytics Python Client.
+:description: Release notes, brief installation instructions, and download archive for the Analytics Python Client.
 :navtitle: Release Notes
 :page-toclevels: 2
 // :page-aliases: sdk-release-notes.adoc
@@ -9,7 +9,7 @@
 {description}
 
 Version {sdk_dot_minor} of the Python Analytics SDK implements the {sdk_api} xref:compatibility.adoc#api-version[SDK API].
-See the xref:compatibility.html#couchbase-feature-availability-matrix[compatibility pages] for more information on feature compatibility with different versions of Enterprise Analytics.
+See the xref:compatibility.html#couchbase-feature-availability-matrix[compatibility pages] for more information on feature compatibility with different versions of Operational Insights.
 
 
 == Installation
@@ -36,7 +36,7 @@ This is the first release of the 1.1 series Analytics Python SDK.
 
 The 1.1 Analytics SDKs add support for JWT and client certificate authentication,
 as well as a new poll-based {async-server-api-feature-name} that uses request handles to fetch results,
-eliminating the need for long-running server connections (compatible with Couchbase Enterprise Analytics Server 2.2).
+eliminating the need for long-running server connections (compatible with Couchbase Operational Insights Server 2.2).
 
 https://docs.couchbase.com/sdk-api/analytics-python-client-1.1.0/[API Reference]
 
@@ -52,7 +52,7 @@ https://docs.couchbase.com/sdk-api/analytics-python-client-1.1.0/[API Reference]
 === Version 1.0.0 (12 August 2025)
 
 This is the first General Availability (GA) release of the new Analytics Python SDK.
-It supports executing queries against Enterprise Analytics clusters, with additional features planned for future releases.
+It supports executing queries against Operational Insights (formerly known as Enterprise Analytics) clusters, with additional features planned for future releases.
 
 https://docs.couchbase.com/sdk-api/analytics-python-client-1.0.0/[API Reference]
 // end::all[]

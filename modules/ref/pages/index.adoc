@@ -1,6 +1,6 @@
 = Reference Pages
 :page-toclevels: 2
-:description: Essential reference infomation for developing with Enterprise Analytics.
+:description: Essential reference infomation for developing with Operational Insights.
 
 
 // Note to editors

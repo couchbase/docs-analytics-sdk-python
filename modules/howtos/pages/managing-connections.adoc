@@ -1,5 +1,5 @@
 = Managing Connections
-:description: This section describes how to connect the {name-sdk} to an Enterprise Analytics cluster.
+:description: This section describes how to connect the {name-sdk} to an Operational Insights cluster.
 :page-toclevels: 2
 
 
@@ -16,7 +16,7 @@
 It contains best practices as well as information on TLS/SSL and advanced connection options.
 
 
-Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to an Enterprise Analytics cluster.
+Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to an Operational Insights cluster.
 This page is a wider look at the topic.
 
 
@@ -32,7 +32,7 @@ from couchbase_analytics.options import (ClusterOptions,
                                         SecurityOptions)
 ----
 
-A connection to an Enterprise Analytics cluster is represented by a `Cluster` object.
+A connection to an Operational Insights cluster is represented by a `Cluster` object.
 // A `Cluster` provides access to databases, scopes, and collections, as well as various Analytics services and management interfaces.
 The simplest way to create a `Cluster` object is to call `Cluster.create_instance()` with a <<connection-strings, connection string>>, user credentials, and any optional settings:
 
@@ -67,7 +67,7 @@ Basic Access Authentication is shown in the example <<#connecting-to-a-cluster,a
 
 === JSON Web Tokens (JWT)
 
-From the 1.1 SDK (with Enterprise Analytics Server 2.2+) JWT is supported.
+From the 1.1 SDK (with Operational Insights Server 2.2+) JWT is supported.
 
 [source,python]
 ----
@@ -82,8 +82,8 @@ def main() -> None:
 
 === Certificate Authentication
 
-From the 1.1 Analytics SDK (with Enterprise Analytics Server 2.2+) certificate authentication is supported.
-A conceptual and architectural overview of Enterprise Analytics's support of X.509 certificates is provided in the xref:{version-server}@server:learn:security/certificates.adoc[Server certificates docs].
+From the 1.1 Analytics SDK (with Operational Insights Server 2.2+) certificate authentication is supported.
+A conceptual and architectural overview of Operational Insights's support of X.509 certificates is provided in the xref:{version-server}@server:learn:security/certificates.adoc[Server certificates docs].
 Practical information on handling certificates can be found in the xref:{version-ea}@enterprise-analytics:manage:manage-security/manage-certificates.adoc[Enterprise Analytics certificates docs].
 
 The Analytics SDK authenticates the client during the TLS handshake.
@@ -116,7 +116,7 @@ cluster = Cluster.create_instance(endpoint, cred)
 
 == Certificate Authority
 
-To make a TLS connection to an Enterprise Analytics cluster with a root certificate issued by a trusted CA (Certificate Authority), you do not need to add this to your configuration --
+To make a TLS connection to an Operational Insights cluster with a root certificate issued by a trusted CA (Certificate Authority), you do not need to add this to your configuration --
 the platform's defaults are automatically trusted.
 
 The cluster's root certificate just needs to be issued by a CA whose certificate is in your system trust store.

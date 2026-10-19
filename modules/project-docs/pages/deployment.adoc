@@ -15,12 +15,14 @@
 
 
 
-One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as the Server. 
+One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as your Operational Insights cluster.
 // -- whether Capella, or your own self-managed cluster.
 
 We always recommend the xref::analytics-sdk-release-notes.adoc#latest-release[latest version] of the SDK. 
-This not only contains the latest security updates and bug fixes, but will be compatible with the latest Enterprise Analytics release.
+This not only contains the latest security updates and bug fixes, but will be compatible with the latest Operational Insights release.
 // (note, Capella always runs a recent version of Couchbase Server).
+
+TIP: As the Analytics SDKs have been superseded by the xref:home::operational-insights-sdk.adoc[Operational Insights SDKs], please look at upgrading as soon as possible.
 
 Before deploying, take note of any xref:compatibility.adoc[compatibility] issues for the language platform and underlying OS.
 The xref:sdk-full-installation.adoc[full installation guide] should cover any special cases for all supported environments.

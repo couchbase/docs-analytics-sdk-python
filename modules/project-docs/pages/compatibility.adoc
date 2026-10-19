@@ -39,11 +39,11 @@ include::{sdk_api}@analytics-sdk:shared:partial$network-requirements.adoc[tag=la
 
 
 
+== Operational Insights Cluster Compatibility
 
-== Enterprise Analytics Compatibility
 
-This is the initial release of Enterprise Analytics and the Analytics SDKs.
-As such, the Analytics SDK is fully compatible with Enterprise Analytics.
+include::1.1@analytics-sdk:shared:partial$compatibility.adoc[tag=cluster-compat]
+
 
 ////
 is a fully hosted service, continually updated, and offering the latest version --

@@ -1,6 +1,6 @@
 = {name-sdk} Quickstart Guide
 :page-toclevels: 2
-:description: Install, connect, try. A quick start guide to get you up and running with Enterprise Analytics and the {name-sdk}.
+:description: Install, connect, try. A quick start guide to get you up and running with Operational Insights and the {name-sdk}.
 
 [abstract]
 {description}
@@ -13,7 +13,7 @@ include::analytics-sdk:shared:partial$start-using-sdk.adoc[tag=intro]
 
 == Before You Start
 
-Install and configure an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics Cluster].
+Install and configure an xref:enterprise-analytics:intro:intro.adoc[Operational Insights Enterprise Cluster].
 
 ////
 Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],

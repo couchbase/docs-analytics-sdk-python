@@ -6,17 +6,17 @@
 
 = Python Analytics SDK
 
-The Analytics Python SDK allows you to connect to an xref:enterprise-analytics:intro:intro.adoc[Enterprise Analytics] cluster from Python.
+The Analytics Python SDK allows you to connect to an xref:enterprise-analytics:intro:intro.adoc[Operational Insights Enterprise] cluster from Python.
 For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operational --
 see our xref:python-sdk:hello-world:overview.adoc[Python Operational SDK].
 
-TIP: Connecting to a xref:columnar:intro:intro.adoc[_Capella_ Analytics] cluster from Python currently requires a xref:python-columnar-sdk:hello-world:overview.adoc[Python Columnar SDK].
+TIP: Connecting to a xref:columnar:intro:intro.adoc[Operational Insights _Capella_] cluster from Python currently requires a xref:python-columnar-sdk:hello-world:overview.adoc[Python Columnar SDK].
 
 {empty} +
 
-== icon:database[] Using Your Analytics Cluster
+== icon:database[] Using Your Operational Insights Cluster
 
-How-to guides and tutorials to help you start your development journey with Enterprise Analytics and the Python SDK.
+How-to guides and tutorials to help you start your development journey with Operational Insights and the Python SDK.
 
 ++++
 <div class="card-row three-column-row">
@@ -25,7 +25,7 @@ How-to guides and tutorials to help you start your development journey with Ente
 [.column]
 .Getting Started
 * xref:hello-world:start-using-sdk.adoc[]
-* xref:howtos:managing-connections.adoc[Connecting to Enterprise Analytics]
+* xref:howtos:managing-connections.adoc[Connecting to Operational Insights]
 * xref:howtos:sqlpp-queries-with-sdk.adoc[]
 
 ////

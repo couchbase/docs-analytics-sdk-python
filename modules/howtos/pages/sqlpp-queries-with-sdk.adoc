@@ -23,7 +23,7 @@ and give links to information on adding other collections to your data.
 
 == Before You Start
 
-This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], and created an xref:enterprise-analytics:install:introduction-linux-installation.adoc[Enterprise Analytics cluster].
+This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], and created an xref:enterprise-analytics:install:introduction-linux-installation.adoc[Operational Insights Enterprise cluster].
 // added your IP address to the allowlist, and xref:columnar:admin:prepare-project.adoc#cluster[created a Columnar cluster].
 
 Create a collection to work upon by xref:enterprise-analytics:intro:connecting-to-data-sources.adoc#import-the-travel-sample-collections[importing the travel-sample dataset] into your cluster.

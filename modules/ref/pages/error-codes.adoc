@@ -1,5 +1,5 @@
 = Error Messages
-:description: The standardized error codes returned by the Analytics Python SDK, from Capella connection to {sqlpp} query.
+:description: The standardized error codes returned by the Analytics Python SDK, from Operational Insights connection to {sqlpp} query.
 :nav-title: Error Codes
 
 [abstract]
@@ -12,6 +12,6 @@
 
 
 
-The {name-sdk} passes through the Analytics error codes from Enterprise Analytics.
+The {name-sdk} passes through the Analytics error codes from Operational Insights.
 
 For a full list of error codes, see xref:{version-server}@server:analytics:error-codes.adoc[Analytics Error Codes].

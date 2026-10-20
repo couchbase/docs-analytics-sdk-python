@@ -1,5 +1,5 @@
 = Managing Connections
-:description: This section describes how to connect the {name-sdk} to an Enterprise Analytics cluster.
+:description: This section describes how to connect the {name-sdk} to an Operational Insights cluster.
 :page-toclevels: 2
 
 
@@ -16,7 +16,7 @@
 It contains best practices as well as information on TLS/SSL and advanced connection options.
 
 
-Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to an Enterprise Analytics cluster.
+Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to an Operational Insights cluster.
 This page is a wider look at the topic.
 
 
@@ -32,7 +32,7 @@ from couchbase_analytics.options import (ClusterOptions,
                                         SecurityOptions)
 ----
 
-A connection to an Enterprise Analytics cluster is represented by a `Cluster` object.
+A connection to an Operational Insights cluster is represented by a `Cluster` object.
 // A `Cluster` provides access to databases, scopes, and collections, as well as various Analytics services and management interfaces.
 The simplest way to create a `Cluster` object is to call `Cluster.createnstance()` with a <<connection-strings, connection string>>, user credentials, and any optional settings:
 
